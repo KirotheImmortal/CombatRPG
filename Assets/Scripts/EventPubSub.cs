@@ -20,7 +20,7 @@ public class EventPubSub : MonoBehaviour
     /// </summary>
     /// <param name="sEvent">String of desided event to wait for</param>
     /// <param name="onEvent">Delegate of OnEvent Void to play when Event Trigger happens</param>
-    protected void Subscribe(string sEvent, EventSystem.OnEvent onEvent)
+    protected void Subscribe(string sEvent, Callback onEvent)
     {
         esEventSystem.Subsribe(sEvent, onEvent);
     }
@@ -30,7 +30,7 @@ public class EventPubSub : MonoBehaviour
     /// </summary>
     /// <param name="sEvent">Target message</param>
     /// <param name="onEvent">onEvent intended to be removed</param>
-    protected void UnSubscribe(string sEvent, EventSystem.OnEvent onEvent)
+    protected void UnSubscribe(string sEvent, Callback onEvent)
     {
         esEventSystem.RemoveSubscription(sEvent, onEvent);
     }
